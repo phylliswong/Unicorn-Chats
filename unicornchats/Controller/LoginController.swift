@@ -24,7 +24,8 @@ class LoginController: UIViewController {
     
     let loginRegisterButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = UIColor(r: 80, g: 101, b: 161)
+//        button.backgroundColor = UIColor(r: 210, g: 59, b: 124) // pink color
+        button.backgroundColor = UIColor(r: 148, g: 194, b: 61) // lime green color
         button.setTitle("Register", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(UIColor.white, for: .normal)
@@ -66,9 +67,19 @@ class LoginController: UIViewController {
         let tf = UITextField()
         tf.placeholder = "Password"
         tf.translatesAutoresizingMaskIntoConstraints = false
+        // mask the text when the user types
+        tf.isSecureTextEntry = true
         return tf
     }()
 
+    let profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "unicorn")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        return imageView
+        
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,9 +87,19 @@ class LoginController: UIViewController {
         view.backgroundColor = UIColor(r: 61, g: 91, b: 151)
         view.addSubview(inputsContainerView)
         view.addSubview(loginRegisterButton)
+        view.addSubview(profileImageView)
         
         setUpContainerView()
         setUpLoginRegisterButton()
+        setupProfileImageView()
+    }
+    
+    func setupProfileImageView() {
+        // Need x, y, width, and height contraints
+        profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        profileImageView.bottomAnchor.constraint(equalTo: inputsContainerView.topAnchor, constant: -12).isActive = true
+        profileImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        profileImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
     
     func setUpContainerView() {
