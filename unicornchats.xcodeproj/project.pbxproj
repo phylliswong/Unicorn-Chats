@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50297CDC2D6A2D34C29DC146 /* Pods_unicornchats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3757E1B415D04069FB3E902 /* Pods_unicornchats.framework */; };
 		B9ACCB3520238C2100D2FE92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACCB3420238C2100D2FE92 /* AppDelegate.swift */; };
 		B9ACCB3720238C2100D2FE92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACCB3620238C2100D2FE92 /* ViewController.swift */; };
 		B9ACCB3A20238C2100D2FE92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9ACCB3820238C2100D2FE92 /* Main.storyboard */; };
 		B9ACCB3C20238C2100D2FE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9ACCB3B20238C2100D2FE92 /* Assets.xcassets */; };
 		B9ACCB3F20238C2100D2FE92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9ACCB3D20238C2100D2FE92 /* LaunchScreen.storyboard */; };
 		B9ACCB482023992700D2FE92 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACCB472023992700D2FE92 /* LoginController.swift */; };
+		B9ACCB4A2023D88100D2FE92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9ACCB492023D88100D2FE92 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D0083A5ECBC985CD59E46EA /* Pods-unicornchats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unicornchats.release.xcconfig"; path = "Pods/Target Support Files/Pods-unicornchats/Pods-unicornchats.release.xcconfig"; sourceTree = "<group>"; };
 		B9ACCB3120238C2100D2FE92 /* unicornchats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unicornchats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ACCB3420238C2100D2FE92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9ACCB3620238C2100D2FE92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		B9ACCB3E20238C2100D2FE92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9ACCB4020238C2100D2FE92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9ACCB472023992700D2FE92 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		B9ACCB492023D88100D2FE92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DFCC3286D4E119BCA25954DE /* Pods-unicornchats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unicornchats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unicornchats/Pods-unicornchats.debug.xcconfig"; sourceTree = "<group>"; };
+		F3757E1B415D04069FB3E902 /* Pods_unicornchats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unicornchats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50297CDC2D6A2D34C29DC146 /* Pods_unicornchats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7707149D39BBD5EBA58A8856 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DFCC3286D4E119BCA25954DE /* Pods-unicornchats.debug.xcconfig */,
+				5D0083A5ECBC985CD59E46EA /* Pods-unicornchats.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AC2F3DB1DFCD3A16B0B5E60A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3757E1B415D04069FB3E902 /* Pods_unicornchats.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9ACCB2820238C2100D2FE92 = {
 			isa = PBXGroup;
 			children = (
 				B9ACCB3320238C2100D2FE92 /* unicornchats */,
 				B9ACCB3220238C2100D2FE92 /* Products */,
+				7707149D39BBD5EBA58A8856 /* Pods */,
+				AC2F3DB1DFCD3A16B0B5E60A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +88,7 @@
 				B9ACCB3B20238C2100D2FE92 /* Assets.xcassets */,
 				B9ACCB3D20238C2100D2FE92 /* LaunchScreen.storyboard */,
 				B9ACCB4020238C2100D2FE92 /* Info.plist */,
+				B9ACCB492023D88100D2FE92 /* GoogleService-Info.plist */,
 			);
 			path = unicornchats;
 			sourceTree = "<group>";
@@ -82,9 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9ACCB4320238C2100D2FE92 /* Build configuration list for PBXNativeTarget "unicornchats" */;
 			buildPhases = (
+				109D53C92141A26321E54EA8 /* [CP] Check Pods Manifest.lock */,
 				B9ACCB2D20238C2100D2FE92 /* Sources */,
 				B9ACCB2E20238C2100D2FE92 /* Frameworks */,
 				B9ACCB2F20238C2100D2FE92 /* Resources */,
+				646B1EFA4B448E8607D4E796 /* [CP] Embed Pods Frameworks */,
+				1BA108C68A5390B709FA3705 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,12 +165,73 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9ACCB3F20238C2100D2FE92 /* LaunchScreen.storyboard in Resources */,
+				B9ACCB4A2023D88100D2FE92 /* GoogleService-Info.plist in Resources */,
 				B9ACCB3C20238C2100D2FE92 /* Assets.xcassets in Resources */,
 				B9ACCB3A20238C2100D2FE92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		109D53C92141A26321E54EA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-unicornchats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BA108C68A5390B709FA3705 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-unicornchats/Pods-unicornchats-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		646B1EFA4B448E8607D4E796 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-unicornchats/Pods-unicornchats-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-unicornchats/Pods-unicornchats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9ACCB2D20238C2100D2FE92 /* Sources */ = {
@@ -284,6 +375,7 @@
 		};
 		B9ACCB4420238C2100D2FE92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFCC3286D4E119BCA25954DE /* Pods-unicornchats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +391,7 @@
 		};
 		B9ACCB4520238C2100D2FE92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D0083A5ECBC985CD59E46EA /* Pods-unicornchats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
