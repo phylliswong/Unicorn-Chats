@@ -120,6 +120,14 @@ class LoginController: UIViewController {
         return imageView
         
     }()
+    
+    let footerImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "drunk-unicorn")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+//        imaeView.contentMode = .scaleAspectFill
+        return imageView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,10 +136,20 @@ class LoginController: UIViewController {
         view.addSubview(inputsContainerView)
         view.addSubview(loginRegisterButton)
         view.addSubview(profileImageView)
+        view.addSubview(footerImageView)
         
         setUpContainerView()
         setUpLoginRegisterButton()
         setupProfileImageView()
+        setupFooterImageView()
+    }
+    
+    func setupFooterImageView() {
+        // Need x, y, width, and height contraints
+        footerImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        footerImageView.topAnchor.constraint(equalTo: loginRegisterButton.bottomAnchor, constant: 12).isActive = true
+        footerImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        footerImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     func setupProfileImageView() {
