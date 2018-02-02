@@ -143,15 +143,13 @@ class LoginController: UIViewController {
     }
     
     func setUpContainerView() {
-        // Need x, y, width, and height contraints
+        // Constraints for the containerView x, y, width, and height
         inputsContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputsContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        
-        // Will give the container 12 pixels on both the leading and trailing edge
         inputsContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
         inputsContainerView.heightAnchor.constraint(equalToConstant: 150).isActive = true
         
-        
+        // All the subviews within the login Container View
         inputsContainerView.addSubview(nameTextField)
         inputsContainerView.addSubview(nameSeparatorView)
         inputsContainerView.addSubview(emailTextField)
@@ -188,8 +186,7 @@ class LoginController: UIViewController {
             passwordTextField.topAnchor.constraint(equalTo: emailSeparatorView.bottomAnchor).isActive = true
             passwordTextField.widthAnchor.constraint(equalTo: emailTextField.widthAnchor).isActive = true
             passwordTextField.heightAnchor.constraint(equalTo: emailTextField.heightAnchor).isActive = true
-        
-        
+ 
     }
     
     func setUpLoginRegisterButton() {
@@ -198,6 +195,8 @@ class LoginController: UIViewController {
         loginRegisterButton.topAnchor.constraint(equalTo: inputsContainerView.bottomAnchor, constant: 12).isActive = true
         loginRegisterButton.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
         loginRegisterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        // testing git
     }
 
     // Make the Status Bar Light/Dark Content for this View
