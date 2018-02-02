@@ -14,8 +14,6 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let ref = Database.database().reference(fromURL: "https://unicornchats.firebaseio.com/")
-//        ref.updateChildValues(["someValue": 123123])
        
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "logout", style: .plain, target: self, action: #selector(handleLogout))
     }
