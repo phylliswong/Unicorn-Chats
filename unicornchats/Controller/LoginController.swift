@@ -121,13 +121,42 @@ class LoginController: UIViewController {
         
     }()
     
-    let footerImageView: UIImageView = {
+    lazy var loginRegisterSegmentedControl: UISegmentedControl = {
+        let sc = UISegmentedControl(items: ["Login", "Register"])
+        sc.translatesAutoresizingMaskIntoConstraints = false
+        sc.tintColor = UIColor.white
+        sc.selectedSegmentIndex = 1
+        sc.addTarget(self, action: #selector(handleLoginRegisterChange), for: .valueChanged)
+        return sc
+    }()
+    
+    @objc func handleLoginRegisterChange() {
+        let title = loginRegisterSegmentedControl.titleForSegment(at: loginRegisterSegmentedControl.selectedSegmentIndex)
+        // When the login active: perform a check if the user data is correct
+        loginRegisterButton.setTitle(title, for: .normal)
+        
+        // Change height of input container view
+        if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
+        inputContainerViewHeightAnchor?.constant = 100
+             // Change height of name text field
+            nameTextFieldHeightAnchor?.isActive = false
+            nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalToConstant: 0)
+        } else {
+           inputContainerViewHeightAnchor?.constant = 150
+            nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive = true
+        }
+        
+       
+    }
+    
+   let footerImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "drunk-unicorn")
         imageView.translatesAutoresizingMaskIntoConstraints = false
 //        imaeView.contentMode = .scaleAspectFill
         return imageView
     }()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,36 +165,50 @@ class LoginController: UIViewController {
         view.addSubview(inputsContainerView)
         view.addSubview(loginRegisterButton)
         view.addSubview(profileImageView)
-        view.addSubview(footerImageView)
+        view.addSubview(loginRegisterSegmentedControl)
         
         setUpContainerView()
         setUpLoginRegisterButton()
         setupProfileImageView()
-        setupFooterImageView()
+        setupLoginRegisterSegmentedControl()
     }
     
-    func setupFooterImageView() {
+  func setupFooterImageView() {
         // Need x, y, width, and height contraints
         footerImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         footerImageView.topAnchor.constraint(equalTo: loginRegisterButton.bottomAnchor, constant: 12).isActive = true
         footerImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
         footerImageView.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
+
+    
+    func setupLoginRegisterSegmentedControl() {
+        // Need x, y, width, and height contraints
+        loginRegisterSegmentedControl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loginRegisterSegmentedControl.bottomAnchor.constraint(equalTo: inputsContainerView.topAnchor, constant: -12).isActive = true
+        loginRegisterSegmentedControl.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        loginRegisterSegmentedControl.heightAnchor.constraint(lessThanOrEqualToConstant: 36).isActive = true
+        
+    }
     
     func setupProfileImageView() {
         // Need x, y, width, and height contraints
         profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        profileImageView.bottomAnchor.constraint(equalTo: inputsContainerView.topAnchor, constant: -12).isActive = true
+        profileImageView.bottomAnchor.constraint(equalTo: loginRegisterSegmentedControl.topAnchor, constant: -12).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 150).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 150).isActive = true
     }
+    
+    var inputContainerViewHeightAnchor: NSLayoutConstraint?
+    var nameTextFieldHeightAnchor: NSLayoutConstraint?
     
     func setUpContainerView() {
         // Constraints for the containerView x, y, width, and height
         inputsContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         inputsContainerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         inputsContainerView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -24).isActive = true
-        inputsContainerView.heightAnchor.constraint(equalToConstant: 150).isActive = true
+            inputContainerViewHeightAnchor = inputsContainerView.heightAnchor.constraint(equalToConstant: 150)
+        inputContainerViewHeightAnchor?.isActive = true
         
         // All the subviews within the login Container View
         inputsContainerView.addSubview(nameTextField)
@@ -179,7 +222,8 @@ class LoginController: UIViewController {
             nameTextField.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 12).isActive = true
             nameTextField.topAnchor.constraint(equalTo: inputsContainerView.topAnchor).isActive = true
             nameTextField.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
-            nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive = true
+            nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3)
+            nameTextFieldHeightAnchor?.isActive = true
         
                 // Constraints for line below the Name
                 nameSeparatorView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor).isActive = true
