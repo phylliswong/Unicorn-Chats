@@ -143,7 +143,8 @@ class LoginController: UIViewController {
             nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalToConstant: 0)
         } else {
            inputContainerViewHeightAnchor?.constant = 150
-            nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3).isActive = true
+            nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3)
+            nameTextFieldHeightAnchor?.isActive = true
         }
         
        
