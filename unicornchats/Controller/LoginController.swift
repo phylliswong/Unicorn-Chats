@@ -154,7 +154,6 @@ class LoginController: UIViewController {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "drunk-unicorn")
         imageView.translatesAutoresizingMaskIntoConstraints = false
-//        imaeView.contentMode = .scaleAspectFill
         return imageView
     }()
 
