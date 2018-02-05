@@ -146,8 +146,10 @@ class LoginController: UIViewController {
             nameTextFieldHeightAnchor = nameTextField.heightAnchor.constraint(equalTo: inputsContainerView.heightAnchor, multiplier: 1/3)
             nameTextFieldHeightAnchor?.isActive = true
         }
-        
-       
+    }
+    
+    func doSomething() {
+        print("git streak")
     }
     
    let footerImageView: UIImageView = {
