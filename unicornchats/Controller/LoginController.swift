@@ -275,6 +275,7 @@ class LoginController: UIViewController {
         loginRegisterButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
         // testing git
+        loginRegisterButton.tintColor = UIColor.black
     }
 
     // Make the Status Bar Light/Dark Content for this View
