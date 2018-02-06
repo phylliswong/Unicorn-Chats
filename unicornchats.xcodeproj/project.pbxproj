@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		50297CDC2D6A2D34C29DC146 /* Pods_unicornchats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3757E1B415D04069FB3E902 /* Pods_unicornchats.framework */; };
 		B9ACCB3520238C2100D2FE92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACCB3420238C2100D2FE92 /* AppDelegate.swift */; };
-		B9ACCB3720238C2100D2FE92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACCB3620238C2100D2FE92 /* ViewController.swift */; };
+		B9ACCB3720238C2100D2FE92 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACCB3620238C2100D2FE92 /* MessagesController.swift */; };
 		B9ACCB3A20238C2100D2FE92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9ACCB3820238C2100D2FE92 /* Main.storyboard */; };
 		B9ACCB3C20238C2100D2FE92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9ACCB3B20238C2100D2FE92 /* Assets.xcassets */; };
 		B9ACCB3F20238C2100D2FE92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9ACCB3D20238C2100D2FE92 /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		5D0083A5ECBC985CD59E46EA /* Pods-unicornchats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unicornchats.release.xcconfig"; path = "Pods/Target Support Files/Pods-unicornchats/Pods-unicornchats.release.xcconfig"; sourceTree = "<group>"; };
 		B9ACCB3120238C2100D2FE92 /* unicornchats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unicornchats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ACCB3420238C2100D2FE92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9ACCB3620238C2100D2FE92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9ACCB3620238C2100D2FE92 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 		B9ACCB3920238C2100D2FE92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9ACCB3B20238C2100D2FE92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9ACCB3E20238C2100D2FE92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		B9ACCB46202398A600D2FE92 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B9ACCB3620238C2100D2FE92 /* ViewController.swift */,
+				B9ACCB3620238C2100D2FE92 /* MessagesController.swift */,
 				B9ACCB472023992700D2FE92 /* LoginController.swift */,
 			);
 			path = Controller;
@@ -238,7 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9ACCB3720238C2100D2FE92 /* ViewController.swift in Sources */,
+				B9ACCB3720238C2100D2FE92 /* MessagesController.swift in Sources */,
 				B9ACCB482023992700D2FE92 /* LoginController.swift in Sources */,
 				B9ACCB3520238C2100D2FE92 /* AppDelegate.swift in Sources */,
 			);
