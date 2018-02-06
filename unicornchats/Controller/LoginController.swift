@@ -35,10 +35,39 @@ class LoginController: UIViewController {
         button.layer.cornerRadius = 3
         button.clipsToBounds = true
         
-        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleLoginRegister), for: .touchUpInside)
         
         return button
     }()
+    
+    @objc func handleLoginRegister() {
+        if loginRegisterSegmentedControl.selectedSegmentIndex == 0 {
+            handleLogin()
+        } else {
+            handleRegister()
+        }
+    }
+    
+    @objc func handleLogin() {
+        
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            print("Form is not valid")
+            return
+        }
+        // call authentication fun from FirebaseAuth
+        Auth.auth().signIn(withEmail: email, password: password) { (user: User?, error) in
+            
+            if error != nil {
+                print(error!)
+                return
+            }
+            
+            // successfully logged in user
+            self.dismiss(animated: true, completion: nil)
+            print("User successfully logged in Firebase db")
+        }
+        
+    }
     
     @objc func handleRegister() {
         
