@@ -14,11 +14,23 @@ class MessagesController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        // Add the logout button to the left side of the navigation bar
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "logout", style: .plain, target: self, action: #selector(handleLogout))
+        
+        // New message icon/button to the right of the bar
+        let image = UIImage(named: "newMessage")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(handleNewMessage))
         
         checkIfUserIsLoggedIn()
         
+    }
+    
+    @objc func handleNewMessage() {
+        
+        let newMessageController = NewMessageController()
+        let navController = UINavigationController(rootViewController: newMessageController)
+        present(navController, animated: true, completion: nil)
+        print("new message was pressed")
     }
     
     func checkIfUserIsLoggedIn() {
@@ -32,8 +44,9 @@ class MessagesController: UITableViewController {
             Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
                 
                 if let dictionary = snapshot.value as? [String: AnyObject] {
-                    self.navigationItem.title = dictionary["name"] as? String
-                    print(snapshot)
+                    // print((dictionary["name"]! as? String)?.description)
+                    self.navigationItem.title = dictionary["name"]! as? String
+                    self.tableView.reloadData()
                 }
                 
             }, withCancel: nil)
