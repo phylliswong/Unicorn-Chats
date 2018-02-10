@@ -16,7 +16,7 @@
 		B9ACCB482023992700D2FE92 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACCB472023992700D2FE92 /* LoginController.swift */; };
 		B9ACCB4A2023D88100D2FE92 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B9ACCB492023D88100D2FE92 /* GoogleService-Info.plist */; };
 		B9DC9601202CFE3C008103EE /* NewMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC9600202CFE3C008103EE /* NewMessageController.swift */; };
-		B9DC9604202D1712008103EE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC9603202D1712008103EE /* User.swift */; };
+		B9DC9604202D1712008103EE /* UNIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9DC9603202D1712008103EE /* UNIUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		B9ACCB472023992700D2FE92 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		B9ACCB492023D88100D2FE92 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B9DC9600202CFE3C008103EE /* NewMessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageController.swift; sourceTree = "<group>"; };
-		B9DC9603202D1712008103EE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B9DC9603202D1712008103EE /* UNIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNIUser.swift; sourceTree = "<group>"; };
 		DFCC3286D4E119BCA25954DE /* Pods-unicornchats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unicornchats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unicornchats/Pods-unicornchats.debug.xcconfig"; sourceTree = "<group>"; };
 		F3757E1B415D04069FB3E902 /* Pods_unicornchats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unicornchats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,7 +111,7 @@
 		B9DC9602202D16EA008103EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B9DC9603202D1712008103EE /* User.swift */,
+				B9DC9603202D1712008103EE /* UNIUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 				B9DC9601202CFE3C008103EE /* NewMessageController.swift in Sources */,
 				B9ACCB3720238C2100D2FE92 /* MessagesController.swift in Sources */,
 				B9ACCB482023992700D2FE92 /* LoginController.swift in Sources */,
-				B9DC9604202D1712008103EE /* User.swift in Sources */,
+				B9DC9604202D1712008103EE /* UNIUser.swift in Sources */,
 				B9ACCB3520238C2100D2FE92 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

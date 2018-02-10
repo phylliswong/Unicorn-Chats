@@ -28,14 +28,9 @@ class NewMessageController: UITableViewController {
         print("Users fetched from the db")
         Database.database().reference().child("users").observe(.childAdded, with: { (snapshot) in
             
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                let user = UNIUser()
-                user.setValuesForKeys(dictionary)
+            if let user = UNIUser(snapshot) {
                 print(user.name ?? "no name", user.email ?? " no email")
             }
-            
-//            print("user found")
-//            print(snapshot)
             
         }, withCancel: nil)
     }
