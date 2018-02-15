@@ -38,7 +38,7 @@ class MessagesController: UITableViewController {
         let newMessageController = NewMessageController()
         let navController = UINavigationController(rootViewController: newMessageController)
         present(navController, animated: true, completion: nil)
-        print("new message was pressed")
+//        print("new message was pressed")
     }
     
     func checkIfUserIsLoggedIn() {
@@ -52,8 +52,9 @@ class MessagesController: UITableViewController {
             Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
                 
                 if let dictionary = snapshot.value as? [String: AnyObject] {
-                     print((dictionary["name"]! as? String)?.description)
-                    self.navigationItem.title = dictionary["name"]! as? String
+                    guard let name = dictionary["name"] else { return }
+                    print( "\nName: \(name)\n" )
+                    self.navigationItem.title = name as? String
                     self.tableView.reloadData()
                 }
                 

@@ -10,21 +10,22 @@ import UIKit
 import Firebase
 
 
-class UNIUser: NSObject {
+class Users: NSObject {
     
-    var name: String?
-    var email: String?
+    @objc var name: String?
+    @objc var email: String?
 
-    init?(_ snapshot: DataSnapshot) {
-        guard
-            let dictionary = snapshot.value as! [String: AnyObject]?,
-            let nameValue = dictionary["name"] as! String?,
-            let emailValue = dictionary["email"] as! String?
-            else {
-                return nil
-        }
-        
-        self.name = nameValue
-        self.email = emailValue
-    }
+//    init?(_ snapshot: DataSnapshot) {
+//        guard
+//            let dictionary = snapshot.value as! [String: AnyObject]?,
+//            let nameValue = dictionary["name"] as! String?,
+//            let emailValue = dictionary["email"] as! String?
+//
+//            else {
+//                return nil
+//            }
+//
+//        self.name = nameValue
+//        self.email = emailValue
+//    }
 }

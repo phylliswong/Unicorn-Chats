@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		50297CDC2D6A2D34C29DC146 /* Pods_unicornchats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3757E1B415D04069FB3E902 /* Pods_unicornchats.framework */; };
+		B95219642036378D004E600E /* LoginController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95219632036378D004E600E /* LoginController+handlers.swift */; };
 		B9ACCB3520238C2100D2FE92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACCB3420238C2100D2FE92 /* AppDelegate.swift */; };
 		B9ACCB3720238C2100D2FE92 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9ACCB3620238C2100D2FE92 /* MessagesController.swift */; };
 		B9ACCB3A20238C2100D2FE92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9ACCB3820238C2100D2FE92 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		5D0083A5ECBC985CD59E46EA /* Pods-unicornchats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unicornchats.release.xcconfig"; path = "Pods/Target Support Files/Pods-unicornchats/Pods-unicornchats.release.xcconfig"; sourceTree = "<group>"; };
+		B95219632036378D004E600E /* LoginController+handlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginController+handlers.swift"; sourceTree = "<group>"; };
 		B9ACCB3120238C2100D2FE92 /* unicornchats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unicornchats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9ACCB3420238C2100D2FE92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9ACCB3620238C2100D2FE92 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			children = (
 				B9ACCB3620238C2100D2FE92 /* MessagesController.swift */,
 				B9ACCB472023992700D2FE92 /* LoginController.swift */,
+				B95219632036378D004E600E /* LoginController+handlers.swift */,
 				B9DC9600202CFE3C008103EE /* NewMessageController.swift */,
 			);
 			path = Controller;
@@ -254,6 +257,7 @@
 			files = (
 				B9DC9601202CFE3C008103EE /* NewMessageController.swift in Sources */,
 				B9ACCB3720238C2100D2FE92 /* MessagesController.swift in Sources */,
+				B95219642036378D004E600E /* LoginController+handlers.swift in Sources */,
 				B9ACCB482023992700D2FE92 /* LoginController.swift in Sources */,
 				B9DC9604202D1712008103EE /* UNIUser.swift in Sources */,
 				B9ACCB3520238C2100D2FE92 /* AppDelegate.swift in Sources */,
