@@ -64,7 +64,6 @@ class LoginController: UIViewController {
             
             // successfully logged in user
             self.dismiss(animated: true, completion: nil)
-            print("User successfully logged in Firebase db")
         }
         
     }
@@ -184,9 +183,6 @@ class LoginController: UIViewController {
         passwordTextFieldHeightAnchor?.isActive = true
     }
     
-    func doSomething() {
-        print("git streak")
-    }
     
    let footerImageView: UIImageView = {
         let imageView = UIImageView()

@@ -12,14 +12,13 @@ import Firebase
 class NewMessageController: UITableViewController {
     
     let cellId = "cellId"
-    
     var users = [UNIUser]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // show cancel button left
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "cancel", style: .plain, target: self, action: #selector(handleCancel))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
         
         fetchUser()
     }

@@ -21,8 +21,16 @@ class MessagesController: UITableViewController {
         let image = UIImage(named: "newMessage")
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(handleNewMessage))
         
-        checkIfUserIsLoggedIn()
         
+        tableView.reloadData()
+    }
+    
+    /* Since we arrive at this view from a dissmissView method
+     we need to add a viewWillAppear to check if user is logged in
+     and load their name in the navigation bar. */
+    override func viewWillAppear(_ animated: Bool) {
+        checkIfUserIsLoggedIn()
+        self.tableView.reloadData()
     }
     
     @objc func handleNewMessage() {
@@ -44,7 +52,7 @@ class MessagesController: UITableViewController {
             Database.database().reference().child("users").child(uid!).observeSingleEvent(of: .value, with: { (snapshot) in
                 
                 if let dictionary = snapshot.value as? [String: AnyObject] {
-                    // print((dictionary["name"]! as? String)?.description)
+                     print((dictionary["name"]! as? String)?.description)
                     self.navigationItem.title = dictionary["name"]! as? String
                     self.tableView.reloadData()
                 }
