@@ -68,41 +68,7 @@ class LoginController: UIViewController {
         
     }
     
-    @objc func handleRegister() {
-        
-        guard let email = emailTextField.text, let password = passwordTextField.text, let name = nameTextField.text else {
-            print("Form is not valid")
-            return
-        }
-        // call authentication fun from FirebaseAuth
-        Auth.auth().createUser(withEmail: email, password: password) { (user: User?, error) in
-            
-            if error != nil {
-                print(error!)
-                return
-            }
-            
-            guard let uid = user?.uid else {
-                return
-            }
-            
-            // Successfully authenticated user
-            let ref = Database.database().reference(fromURL: "https://unicornchats.firebaseio.com/")
-            let usersReference = ref.child("users").child(uid)
-            
-            let values = ["name": name, "email": email]
-            usersReference.updateChildValues(values, withCompletionBlock: { (err, ref) in
-                if err != nil {
-                    print(err!)
-                    return
-                }
-                // Dissmiss view controller to view the appication
-                self.dismiss(animated: true, completion: nil)
-                print("Saved user successfully into Firebase db")
-            })
-
-        }
-    }
+   
     
     let nameTextField: UITextField = {
         let tf = UITextField()
